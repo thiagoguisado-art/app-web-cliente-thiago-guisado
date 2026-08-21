@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TechStore - Tienda online de productos electrónicos">
+    <title>TechStore | Inicio</title>
+</head>
+<body>
+    <header class="encabezado">
+        <a href="index.html" class="logo">
+            <h1>TechStore</h1>
+        </a>
+
+        <form role="search" action="#" method="get" class="buscador">
+            <label for="buscar-producto">Buscar productos:</label>
+            <input type="search" id="buscar-producto" name="q" placeholder="Buscar...">
+            <button type="submit">Buscar</button>
+        </form>
+
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li>
+                    <a href="#" class="carrito">Carrito (<span id="contador-carrito">0</span>)</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <aside class="filtros" aria-label="Filtros de búsqueda">
+            <h2>Filtros</h2>
+
+            <form action="#" method="get">
+                <fieldset>
+                    <legend>Categorías</legend>
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="cat-celulares" name="categoria" value="celulares">
+                            <label for="cat-celulares">Celulares</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="cat-notebooks" name="categoria" value="notebooks">
+                            <label for="cat-notebooks">Notebooks</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="cat-audio" name="categoria" value="audio">
+                            <label for="cat-audio">Audio</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="cat-accesorios" name="categoria" value="accesorios">
+                            <label for="cat-accesorios">Accesorios</label>
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Precio</legend>
+                    <ul>
+                        <li>
+                            <input type="radio" id="precio-todos" name="precio" value="todos" checked>
+                            <label for="precio-todos">Todos</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="precio-hasta-500" name="precio" value="0-500000">
+                            <label for="precio-hasta-500">Hasta $500.000</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="precio-mas-500" name="precio" value="500000+">
+                            <label for="precio-mas-500">Más de $500.000</label>
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Disponibilidad</legend>
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="solo-stock" name="stock" value="disponible">
+                            <label for="solo-stock">Solo en stock</label>
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <button type="submit">Aplicar filtros</button>
+            </form>
+        </aside>
+
+        <section class="productos-destacados" aria-labelledby="titulo-destacados">
+            <h2 id="titulo-destacados">Productos destacados</h2>
+
+            <div class="grilla-productos">
+                <article class="tarjeta-producto">
+                    <figure>
+                        <img src="https://placehold.co/300x200" alt="Imagen del celular Samsung Galaxy S24" width="300" height="200">
+                    </figure>
+                    <h3>Samsung Galaxy S24</h3>
+                    <p>Celular 256GB, cámara de 50MP.</p>
+                    <p class="precio">$899.999</p>
+                    <button type="button">Agregar al carrito</button>
+                </article>
+
+                <article class="tarjeta-producto">
+                    <figure>
+                        <img src="https://placehold.co/300x200" alt="Imagen del notebook Lenovo IdeaPad 5" width="300" height="200">
+                    </figure>
+                    <h3>Lenovo IdeaPad 5</h3>
+                    <p>Notebook 16GB RAM, SSD 512GB.</p>
+                    <p class="precio">$750.000</p>
+                    <button type="button">Agregar al carrito</button>
+                </article>
+
+                <article class="tarjeta-producto">
+                    <figure>
+                        <img src="https://placehold.co/300x200" alt="Imagen de auriculares Sony WH-1000XM5" width="300" height="200">
+                    </figure>
+                    <h3>Sony WH-1000XM5</h3>
+                    <p>Auriculares bluetooth con cancelación de ruido.</p>
+                    <p class="precio">$420.500</p>
+                    <button type="button">Agregar al carrito</button>
+                </article>
+
+                <article class="tarjeta-producto">
+                    <figure>
+                        <img src="https://placehold.co/300x200" alt="Imagen del smartwatch Xiaomi Watch S3" width="300" height="200">
+                    </figure>
+                    <h3>Xiaomi Watch S3</h3>
+                    <p>Smartwatch GPS, batería de 15 días.</p>
+                    <p class="precio">$185.000</p>
+                    <button type="button">Agregar al carrito</button>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie-pagina">
+        <nav aria-label="Enlaces del pie de página">
+            <h2>Institucional</h2>
+            <ul>
+                <li><a href="#">Sobre nosotros</a></li>
+                <li><a href="#">Términos y condiciones</a></li>
+                <li><a href="#">Políticas de devolución</a></li>
+            </ul>
+        </nav>
+
+        <address>
+            <h2>Contacto</h2>
+            <p>Email: contacto@techstore.com.ar</p>
+            <p>Teléfono: +54 11 1234-5678</p>
+        </address>
+
+        <div class="redes-sociales">
+            <h2>Seguinos</h2>
+            <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">X</a></li>
+                <li><a href="#">Facebook</a></li>
+            </ul>
+        </div>
+
+        <p>&copy; 2026 TechStore. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
