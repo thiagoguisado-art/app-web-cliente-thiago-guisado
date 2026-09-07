@@ -1,0 +1,6 @@
+el historial original de la terminal se cerró antes de guardarlo. Este documento reconstruye los prompts usados y los resultados obtenidos durante la sesión con OpenCode
+
+PROMPT 1: Tengo un index.html con la estructura de TechStore (header, main con aside de filtros y sección de productos destacados, footer). Agregame antes del cierre de </main> una nueva sección con class="formulario-contacto" que contenga un <h2>Contacto</h2> y un formulario de contacto con campos nombre, email y mensaje. Usá validación HTML5 nativa (required, type="email", minlength en el mensaje) y cada input con su label correctamente vinculado por for/id, siguiendo el mismo estilo de labels que ya uso en los filtros
+PROMPT 2: Explicame línea por línea el formulario de contacto que generaste, especialmente los atributos de validación (required, type="email", minlength, etc.) y por qué elegiste esos valores
+
+Modificacion a mano: Agregué un campo "Asunto" con un <select> (opciones: Consulta, Reclamo, Sugerencia) entre los campos de Email y Mensaje, sin usar OpenCode. Al copiar y pegar el bloque tuve que corregir la estructura de los <div> un par de veces porque quedaron duplicados o mal anidados, hasta que el HTML quedó bien formado

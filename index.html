@@ -135,6 +135,53 @@
                 </article>
             </div>
         </section>
+
+        <section class="formulario-contacto" aria-labelledby="titulo-contacto">
+            <h2 id="titulo-contacto">Contacto</h2>
+
+            <form action="#" method="post">
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+
+                      <div>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div>
+                            <label for="asunto">Asunto:</label>
+                            <select id="asunto" name="asunto" required>
+                                <option value="">Seleccioná un motivo</option>
+                                <option value="consulta">Consulta</option>
+                                <option value="reclamo">Reclamo</option>
+                                <option value="sugerencia">Sugerencia</option>
+                            </select>
+                        </div>
+                    
+                 <div>
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" minlength="10" rows="5" required></textarea>
+                </div>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <section class="multimedia" aria-labelledby="titulo-multimedia">
+            <h2 id="titulo-multimedia">Galería y demo de la tienda</h2>
+
+            <figure>
+                <img src="https://placehold.co/600x400" alt="Vista general del interior de la tienda TechStore" width="600" height="400" loading="lazy">
+                <figcaption>Nuestra tienda TechStore</figcaption>
+            </figure>
+
+            <video controls width="600" preload="none" poster="https://placehold.co/600x338">
+                <source src="video-demo-tienda.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de video.
+            </video>
+        </section>
     </main>
 
     <footer class="pie-pagina">
