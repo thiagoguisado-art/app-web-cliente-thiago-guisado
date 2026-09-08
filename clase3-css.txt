@@ -1,0 +1,33 @@
+Log de la sesión de OpenCode - Clase 3: CSS Moderno
+
+1er PROMPT Necesito crear un archivo styles.css y vincularlo a mi index.html. En el CSS, generá un :root con al menos 6 variables: color primario, color de fondo, color de texto, un color de fondo alternativo para dark mode, un radio de borde, y una sombra.
+Explicación de cada variable en :root:
+- --color-primario: color principal de marca (azul). Se usa para enlaces, botones, elementos destacados. Cambiarlo en un solo lugar actualiza toda la web.
+- --color-fondo: fondo claro del sitio. Al redefinirla en [data-tema="dark"] se cambia todo el theme light.
+- --color-texto: color del contenido legible (textos, párrafos, títulos). Centralizarlo garantiza contraste y consistencia.
+- --color-fondo-dark: fondo alternativo preparado para dark mode (@media (prefers-color-scheme: dark) o una clase .dark). Evita crear valores sueltos por archivo.
+- --radio-borde: radio de las esquinas (10px) aplicado a tarjetas, inputs, botones. Mantiene uniformidad visual en toda la UI.
+- --sombra: sombra base (0 4px 12px rgba(...)) para elevar tarjetas y contenedores. Consistente en profundidad de los elementos.
+
+2do PROMPT Ahora aplicá esas variables CSS al header, nav, main y footer de mi index.html. Necesito tipografía, colores (usando var(--color-fondo), var(--color-texto), etc.) y padding/spacing consistente. Acordate de agregar box-sizing: border-box en el reset.
+-Estilos de fondo/color usando var(--color-fondo), var(--color-texto), var(--color-primario), var(--color-fondo-dark), var(--color-borde) y var(--radio-borde).
+-Padding/spacing consistente: 1rem 2rem en header, 2rem en main y footer, gaps con --color y 1rem.
+-El reset ya tenía box-sizing: border-box (línea 14 de style.css), así que no hizo falta cambiarlo.
+-En el footer usé blanco para texto/enlaces porque se apoya en --color-fondo-dark (fondo oscuro), si --color-texto oscuro quedaba ilegible.
+
+3er PROMPT Ahora necesito que la grilla de productos destacados (.grilla-productos) sea un grid responsive: 1 columna en mobile, 2 columnas en tablet (min-width: 768px), 3 columnas en desktop (min-width: 1024px). Usá @media queries mobile-first y las variables ya definidas. 
+Línea por línea:
+- @media (min-width: 768px) { — la regla solo se aplica cuando el ancho del viewport es mayor o igual a 768px. Al usar min-width (mobile-first) los estilos base (1 columna) no se repiten, solo se refuerzan/amplían en pantallas más grandes. Los estilos anteriores que vimos antes aplican por defecto: display: grid activa el contenedor grid, grid-template-columns: 1fr define 1 columna flexible que ocupa todo el ancho, gap: 1.25rem separa las tarjetas.
+- .grilla-productos { — selecciona el contenedor grid del HTML.
+- grid-template-columns: repeat(2, 1fr) — ahora en pantallas ≥768px la grilla pasa a 2 columnas de igual ancho (1fr reparte el espacio en partes iguales). repeat(2, 1fr) equivale a 1fr 1fr.
+- } cierra la regla y } cierra el media query.
+El de desktop es idéntico pero con min-width: 1024px y repeat(3, 1fr) → 3 columnas a partir de ese ancho. Al ser mobile-first, todo lo declarado antes (gap, padding, colors) se hereda y solo cambia el número de columnas.
+
+PROMPT 4 Convertí mi header (.encabezado) en un navbar con Flexbox: display:flex, el logo a la izquierda, el buscador y los links de navegación distribuidos con justify-content, y el ícono/link del carrito a la derecha. Usá gap en vez de margins sueltos para separar los elementos.
+- .encabezado — display: flex, justify-content: space-between distribuye los 3 grupos: logo a la izquierda, buscador y nav en el medio, separados con gap: 1rem (sin margins sueltos).
+- nav ul — display: flex con gap: 1rem para los links.
+- nav ul li:last-child (margin-left: auto) — empuja el link del carrito al extremo derecho del nav. Este es el único margen del layout, pero no separa elementos: sirve para "empujar" el carrito al borde, que es el patrón estándar en flexbox.
+- .carrito — estilado como botón/ícono con var(--color-primario), padding y var(--radio-borde).
+Todo respeta flex-wrap para que en mobile las filas se acomoden sin romperse.
+
+ Modificación a mano: Cambié el gap del grid de productos de 1.25rem a 2rem en styles.css porque en desktop las tarjetas se veían muy juntas. Verificado con DevTools (pestaña Computed) que el column-gap y row-gap quedaron en 32px.
