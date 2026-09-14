@@ -1,0 +1,24 @@
+PROMPT 1 Convertí mi header/navbar en fixed: position: fixed, top: 0, con z-index: 100 para que quede por encima del contenido al hacer scroll. Agregá el padding-top necesario al body o main para compensar el espacio. 
+el z-index: position: fixed saca al header del flujo normal, pero no garantiza que quede encima. Si otro elemento del contenido tuviera su propio contexto de apilamiento (por ejemplo un position con z-index, un transform, o el box-shadow), podría dibujarse por arriba del navbar y taparlo. El z-index: 100 fuerza al header a quedar por delante en el eje Z para que el contenido siempre scrollee por debajo.
+PROMPT 2 Agregame un badge tipo NUEVO u OFERTA posicionado en la esquina superior derecha de cada tarjeta de producto (.tarjeta-producto). El badge tiene que ser position: absolute, y la tarjeta necesita position: relative como padre. Explicame por qué el padre necesita relative para que el absolute funcione bien
+Cada .tarjeta-producto ahora contiene un <span class="badge"> (Nuevo/Oferta, con badge--oferta en rojo). La tarjeta quedó con position: relative y el badge con position: absolute; top: 0; right: 0 (styles.css:123–147).
+PROMPT 3 En las cards de mi catálogo, quiero un efecto hover que las levante un poco y les agregue sombra. Que sea suave, no brusco. Explicame qué propiedades CSS usás y por qué ese timing.
+En styles.css agregué:
+.tarjeta-producto : transition: transform 0.25s ease, box-shadow 0.25s ease.
+.tarjeta-producto:hover : transform: translateY(-6px) y box-shadow: 0 12px 24px rgba(0,0,0,0.2).
+Qué propiedades uso:
+transform: translateY(-6px) levanta la card 6px sin tocar el layout (no desplaza al resto de la grilla).
+box-shadow más grande y difusa simula la elevación/altura.
+transition interpola ambos valores entre el estado normal y el hover.
+Por qué ese timing (0.25s ease): 0.25s se percibe como respondón sin ser brusco — menos de ~150ms se siente "pegajoso" y más de ~400ms da sensación de lentitud. ease arranca rápido y decelera al final, lo que imita el movimiento natural (un objeto se "suelta" y frena); un linear se vería robótico. La transición también aplica al salir el mouse, por lo que la card baja suavemente al quitar el hover
+PROMPT 4 Creá una animación @keyframes que haga que las tarjetas de productos aparezcan desde abajo con fade in cuando carga la página. Cada tarjeta con un delay de 0.1s entre sí (animation-delay escalonado)
+@keyframes aparecer (styles.css:135): de opacity: 0; translateY(24px) a opacity: 1; translateY(0).
+.grilla-productos .tarjeta-producto con animation: aparecer 0.5s ease both y delays escalonados vía nth-child: 0s, 0.1s, 0.2s, 0.3s (styles.css:150–166).
+animation-delay: tiempo que espera la animación antes de arrancar. Al escalonarlo 0.1s por tarjeta se genera el efecto "cascada", cada card entra justo cuando la anterior ya visible. El delay aplica solo la primera vez; una iteración siguiente no lo repite.
+animation-fill-mode: qué estilos aplica la animación fuera de su ventana de ejecución.
+backwards: durante el delay aplica el primer keyframe (from: opacity: 0), así las cards quedan invisibles mientras esperan su turno. Sin esto, verías todas las cards visibles y luego "reiniciándose" cuando toca su delay.
+forwards: al terminar, mantiene el último keyframe (opacity: 1).
+both: combina ambos, que es lo que uso — crítico acá por el backwards, porque sin él el escalonamiento rompe el efecto de fade in
+PROMPT 5 Agregale un ::after a los links del nav con una línea animada que aparezca por debajo al hacer hover, usando transition.
+en styles.css:
+- nav ul li a con position: relative y ::after (una línea de 2px, scaleX(0) → scaleX(1) al hover, con transition de 0.25s). Excluí .carrito con :not(.carrito) porque es un botón y no necesita subrayado.
