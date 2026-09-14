@@ -1,13 +1,15 @@
 :root {
-    color-scheme: dark;
-    --color-primario: #1e88e5;
-    --color-fondo: #121212;
-    --color-superficie: #1e1e1e;
-    --color-texto: #e6e6e6;
-    --color-fondo-dark: #0b0b0b;
-    --radio-borde: 10px;
-    --sombra: 0 4px 12px rgba(0, 0, 0, 0.5);
-    --color-borde: #333333;
+    color-scheme: light;
+    --color-rojo: #d32f2f;
+    --color-rojo-oscuro: #b71c1c;
+    --color-rojo-claro: #ef5350;
+    --color-fondo: #f8f8f8;
+    --color-superficie: #ffffff;
+    --color-texto: #111111;
+    --color-texto-suave: #6b7280;
+    --color-borde: #e0e0e0;
+    --radio-borde: 12px;
+    --sombra: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
 
 * {
@@ -23,7 +25,7 @@ body {
 }
 
 a {
-    color: var(--color-primario);
+    color: var(--color-rojo);
 }
 
 img,
@@ -33,10 +35,23 @@ video {
     border-radius: var(--radio-borde);
 }
 
-.encabezado,
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 .tarjeta-producto,
 .formulario-contacto,
-.pie-pagina {
+.pie-pagina,
+.filtros,
+.banner-hero__fila figure {
     box-shadow: var(--sombra);
     border-radius: var(--radio-borde);
 }
@@ -47,73 +62,47 @@ video {
     left: 0;
     right: 0;
     z-index: 100;
-    padding: 1rem 2rem;
-    background-color: var(--color-superficie);
-    color: var(--color-texto);
-    font-family: inherit;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
-    border: 1px solid var(--color-borde);
+    padding: 0.75rem 2rem;
+    background-color: var(--color-superficie);
+    color: var(--color-texto);
+    box-shadow: var(--sombra);
+    border-bottom: 3px solid var(--color-rojo);
 }
 
 .encabezado .logo {
-    color: var(--color-primario);
     text-decoration: none;
     font-size: 1.25rem;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: 0;
+.encabezado .logo h1 {
+    color: var(--color-rojo);
+    letter-spacing: 0.02em;
 }
 
-nav li {
-    padding: 0.25rem 0;
-}
-
-nav ul li a {
-    position: relative;
-    text-decoration: none;
-    padding-bottom: 0.25rem;
-}
-
-nav ul li a:not(.carrito)::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background-color: var(--color-primario);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.25s ease;
-}
-
-nav ul li a:not(.carrito):hover::after {
-    transform: scaleX(1);
-}
-
-nav ul li:last-child {
-    margin-left: auto;
-}
-
-.carrito {
-    background-color: var(--color-primario);
-    color: #ffffff;
-    padding: 0.5rem 1rem;
+.selector-categoria select {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--color-borde);
     border-radius: var(--radio-borde);
-    text-decoration: none;
-    white-space: nowrap;
+    background-color: var(--color-superficie);
+    color: var(--color-texto);
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.selector-categoria select:focus,
+.buscador input:focus {
+    outline: 2px solid var(--color-rojo);
+    outline-offset: 1px;
 }
 
 .buscador {
+    flex: 1 1 auto;
+    max-width: 480px;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -129,20 +118,147 @@ nav ul li:last-child {
     background-color: var(--color-superficie);
 }
 
+.buscador input {
+    flex: 1;
+    min-width: 0;
+}
+
 .buscador button {
-    background-color: var(--color-primario);
+    background-color: var(--color-rojo);
+    border-color: var(--color-rojo);
     color: #ffffff;
     cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+.buscador button:hover {
+    background-color: var(--color-rojo-oscuro);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 0;
+}
+
+nav ul li a:not(.carrito) {
+    position: relative;
+    color: var(--color-texto);
+    text-decoration: none;
+    padding-bottom: 0.25rem;
+}
+
+nav ul li a:not(.carrito)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-rojo);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+}
+
+nav ul li a:not(.carrito):hover::after {
+    transform: scaleX(1);
+}
+
+.carrito {
+    background-color: var(--color-rojo);
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radio-borde);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 0.25s ease;
+}
+
+.carrito:hover {
+    background-color: var(--color-rojo-oscuro);
 }
 
 main {
-    padding: 8rem 2rem 2rem;
-    color: var(--color-texto);
+    padding: 7rem 2rem 2rem;
 }
 
 main h2 {
-    color: var(--color-primario);
+    color: var(--color-rojo);
     margin-bottom: 1rem;
+}
+
+.banner-hero {
+    margin-bottom: 2.5rem;
+}
+
+.banner-hero__fila {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.banner-hero__fila figure {
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid var(--color-borde);
+}
+
+.banner-hero__fila img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+@media (min-width: 768px) {
+    .banner-hero__fila {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.filtros {
+    background-color: var(--color-superficie);
+    padding: 1.5rem;
+    border: 1px solid var(--color-borde);
+    margin-bottom: 2rem;
+}
+
+.filtros fieldset {
+    border: none;
+    margin-bottom: 1.25rem;
+    padding: 0;
+}
+
+.filtros legend {
+    font-weight: bold;
+    color: var(--color-rojo);
+    margin-bottom: 0.5rem;
+}
+
+.filtros ul {
+    list-style: none;
+    display: grid;
+    gap: 0.5rem;
+    padding: 0;
+}
+
+.filtros button[type="submit"] {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: var(--radio-borde);
+    background-color: var(--color-rojo-oscuro);
+    color: #ffffff;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+.filtros button[type="submit"]:hover {
+    background-color: #991b1b;
 }
 
 .grilla-productos {
@@ -154,14 +270,62 @@ main h2 {
 
 .tarjeta-producto {
     position: relative;
+    display: flex;
+    flex-direction: column;
     background-color: var(--color-superficie);
-    padding: 1.25rem;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border: 1px solid var(--color-rojo);
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .tarjeta-producto:hover {
     transform: translateY(-6px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    border-color: var(--color-rojo-oscuro);
+}
+
+.tarjeta-producto figure {
+    margin: 0;
+}
+
+.tarjeta-producto img {
+    width: 100%;
+    border-radius: 0;
+}
+
+.tarjeta-producto h3 {
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 1rem 1.25rem 0;
+}
+
+.tarjeta-producto p:not(.precio) {
+    padding: 0.5rem 1.25rem 0;
+    color: var(--color-texto-suave);
+}
+
+.tarjeta-producto .precio {
+    padding: 0.75rem 1.25rem;
+    color: var(--color-rojo);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.tarjeta-producto button {
+    margin-top: auto;
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: none;
+    background-color: var(--color-rojo-oscuro);
+    color: #ffffff;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+.tarjeta-producto button:hover {
+    background-color: #991b1b;
 }
 
 @keyframes aparecer {
@@ -177,7 +341,7 @@ main h2 {
 }
 
 .grilla-productos .tarjeta-producto {
-    animation: aparecer 0.5s ease both;
+    animation: aparecer 0.5s ease backwards;
 }
 
 .grilla-productos .tarjeta-producto:nth-child(2) {
@@ -196,7 +360,7 @@ main h2 {
     position: absolute;
     top: 0;
     right: 0;
-    background-color: var(--color-primario);
+    background-color: var(--color-rojo);
     color: #ffffff;
     padding: 0.35rem 0.75rem;
     border-radius: 0 var(--radio-borde) 0 var(--radio-borde);
@@ -207,7 +371,7 @@ main h2 {
 }
 
 .badge--oferta {
-    background-color: #e53935;
+    background-color: var(--color-texto);
 }
 
 @media (min-width: 768px) {
@@ -222,19 +386,63 @@ main h2 {
     }
 }
 
+.formulario-contacto {
+    background-color: var(--color-superficie);
+    padding: 2rem;
+    border: 1px solid var(--color-borde);
+    margin-top: 3rem;
+}
+
+.formulario-contacto form {
+    display: grid;
+    gap: 1rem;
+}
+
+.formulario-contacto label {
+    font-weight: bold;
+}
+
+.formulario-contacto input,
+.formulario-contacto select,
+.formulario-contacto textarea {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-borde);
+    font-family: inherit;
+    color: var(--color-texto);
+    background-color: var(--color-superficie);
+}
+
+.formulario-contacto button[type="submit"] {
+    justify-self: start;
+    padding: 0.6rem 1.5rem;
+    border: none;
+    border-radius: var(--radio-borde);
+    background-color: var(--color-rojo-oscuro);
+    color: #ffffff;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+.formulario-contacto button[type="submit"]:hover {
+    background-color: #991b1b;
+}
+
 .pie-pagina {
     padding: 2rem;
-    background-color: var(--color-fondo-dark);
+    background-color: #111111;
     color: #ffffff;
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: space-between;
-    border: 1px solid var(--color-borde);
 }
 
 .pie-pagina h2 {
-    color: var(--color-primario);
+    color: var(--color-rojo-claro);
     margin-bottom: 0.75rem;
 }
 
