@@ -13,17 +13,27 @@
             <h1>Thi.store</h1>
         </a>
 
+        <form class="selector-categoria" action="#" method="get">
+            <label for="selector-categoria" class="visually-hidden">Filtrar por categoría:</label>
+            <select id="selector-categoria" name="categoria">
+                <option value="">Todas las categorías</option>
+                <option value="celulares">Celulares</option>
+                <option value="notebooks">Notebooks</option>
+                <option value="audio">Audio</option>
+                <option value="accesorios">Accesorios</option>
+            </select>
+        </form>
+
         <form role="search" action="#" method="get" class="buscador">
-            <label for="buscar-producto">Buscar productos:</label>
+            <label for="buscar-producto" class="visually-hidden">Buscar productos:</label>
             <input type="search" id="buscar-producto" name="q" placeholder="Buscar...">
             <button type="submit">Buscar</button>
         </form>
+
         <nav aria-label="Navegación principal">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="#">Productos</a></li>
-                <li><a href="#">Ofertas</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="#contacto">Contacto</a></li>
                 <li>
                     <a href="#" class="carrito">Carrito (<span id="contador-carrito">0</span>)</a>
                 </li>
@@ -36,28 +46,6 @@
             <h2>Filtros</h2>
 
             <form action="#" method="get">
-                <fieldset>
-                    <legend>Categorías</legend>
-                    <ul>
-                        <li>
-                            <input type="checkbox" id="cat-celulares" name="categoria" value="celulares">
-                            <label for="cat-celulares">Celulares</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="cat-notebooks" name="categoria" value="notebooks">
-                            <label for="cat-notebooks">Notebooks</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="cat-audio" name="categoria" value="audio">
-                            <label for="cat-audio">Audio</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="cat-accesorios" name="categoria" value="accesorios">
-                            <label for="cat-accesorios">Accesorios</label>
-                        </li>
-                    </ul>
-                </fieldset>
-
                 <fieldset>
                     <legend>Precio</legend>
                     <ul>
@@ -89,6 +77,20 @@
                 <button type="submit">Aplicar filtros</button>
             </form>
         </aside>
+
+        <section class="banner-hero" aria-label="Destacados de la tienda">
+            <div class="banner-hero__fila">
+                <figure>
+                    <img src="https://placehold.co/600x300" alt="Destaque del celular Samsung Galaxy S24" width="600" height="300">
+                </figure>
+                <figure>
+                    <img src="https://placehold.co/600x300" alt="Destaque del notebook Lenovo IdeaPad 5" width="600" height="300">
+                </figure>
+                <figure>
+                    <img src="https://placehold.co/600x300" alt="Destaque de los auriculares Sony WH-1000XM5" width="600" height="300">
+                </figure>
+            </div>
+        </section>
 
         <section class="productos-destacados" aria-labelledby="titulo-destacados">
             <h2 id="titulo-destacados">Productos destacados</h2>
@@ -140,7 +142,7 @@
             </div>
         </section>
 
-        <section class="formulario-contacto" aria-labelledby="titulo-contacto">
+        <section class="formulario-contacto" id="contacto" aria-labelledby="titulo-contacto">
             <h2 id="titulo-contacto">Contacto</h2>
 
             <form action="#" method="post">
