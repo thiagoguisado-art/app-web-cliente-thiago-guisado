@@ -1,11 +1,13 @@
 :root {
-    --color-primario: #1565c0;
-    --color-fondo: #ffffff;
-    --color-texto: #1a1a1a;
-    --color-fondo-dark: #121212;
+    color-scheme: dark;
+    --color-primario: #1e88e5;
+    --color-fondo: #121212;
+    --color-superficie: #1e1e1e;
+    --color-texto: #e6e6e6;
+    --color-fondo-dark: #0b0b0b;
     --radio-borde: 10px;
-    --sombra: 0 4px 12px rgba(0, 0, 0, 0.15);
-    --color-borde: #e0e0e0;
+    --sombra: 0 4px 12px rgba(0, 0, 0, 0.5);
+    --color-borde: #333333;
 }
 
 * {
@@ -24,6 +26,13 @@ a {
     color: var(--color-primario);
 }
 
+img,
+video {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radio-borde);
+}
+
 .encabezado,
 .tarjeta-producto,
 .formulario-contacto,
@@ -33,8 +42,13 @@ a {
 }
 
 .encabezado {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
     padding: 1rem 2rem;
-    background-color: var(--color-fondo);
+    background-color: var(--color-superficie);
     color: var(--color-texto);
     font-family: inherit;
     display: flex;
@@ -63,6 +77,29 @@ nav li {
     padding: 0.25rem 0;
 }
 
+nav ul li a {
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 0.25rem;
+}
+
+nav ul li a:not(.carrito)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-primario);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+}
+
+nav ul li a:not(.carrito):hover::after {
+    transform: scaleX(1);
+}
+
 nav ul li:last-child {
     margin-left: auto;
 }
@@ -89,7 +126,7 @@ nav ul li:last-child {
     border-radius: var(--radio-borde);
     font-family: inherit;
     color: var(--color-texto);
-    background-color: var(--color-fondo);
+    background-color: var(--color-superficie);
 }
 
 .buscador button {
@@ -99,7 +136,7 @@ nav ul li:last-child {
 }
 
 main {
-    padding: 2rem;
+    padding: 8rem 2rem 2rem;
     color: var(--color-texto);
 }
 
@@ -116,8 +153,61 @@ main h2 {
 }
 
 .tarjeta-producto {
-    background-color: var(--color-fondo);
+    position: relative;
+    background-color: var(--color-superficie);
     padding: 1.25rem;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tarjeta-producto:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.grilla-productos .tarjeta-producto {
+    animation: aparecer 0.5s ease both;
+}
+
+.grilla-productos .tarjeta-producto:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.grilla-productos .tarjeta-producto:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.grilla-productos .tarjeta-producto:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--color-primario);
+    color: #ffffff;
+    padding: 0.35rem 0.75rem;
+    border-radius: 0 var(--radio-borde) 0 var(--radio-borde);
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.badge--oferta {
+    background-color: #e53935;
 }
 
 @media (min-width: 768px) {
