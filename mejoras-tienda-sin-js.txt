@@ -1,0 +1,22 @@
+IMPORTANTE: No uses JavaScript para nada. Todo tiene que resolverse con HTML y CSS puro. Mantené la identidad visual actual: fondo claro/blanco, rojo como color principal, detalles en negro, y las imágenes que ya tengo. Que se vea moderno y profesional, sin complicarlo de más.
+
+Quiero agregar estas secciones:
+
+1. CATEGORÍAS: debajo del banner, una sección "Explorá por categoría" con tarjetas para Celulares, Audio, Informática, Gaming, Smartwatch y Accesorios (con emojis). Las tarjetas necesitan hover con una pequeña animación.
+
+2. OFERTAS DEL DÍA: una sección "🔥 Ofertas del día" con productos que muestren imagen, nombre, precio anterior tachado, precio actual, porcentaje de descuento y botón "Agregar al carrito" (el botón puede ser solo visual, no hace falta que sume nada).
+
+3. MÁS VENDIDOS: una sección "⭐ Más vendidos" con varios productos y una etiqueta de ranking (#1, #2, #3, etc.).
+
+4. BENEFICIOS: una franja con 4 beneficios: Envíos a todo el país, Compra segura, Hasta 12 cuotas, Garantía.
+
+5. THI.STORE RECOMIENDA: una sección destacada con un producto grande, su imagen, características, valoración con estrellas, precio y botón "Comprar ahora".
+
+6. FOOTER MEJORADO: dividido en columnas (Thi.store, Productos, Ayuda, Seguinos, Contacto) con íconos de Instagram, TikTok y Facebook.
+
+7. DESCRIPCIÓN AL TOCAR UN PRODUCTO: usando el truco de checkbox oculto + :checked (sin JavaScript), que al hacer click en una tarjeta de producto se abra una vista con más detalle: imagen más grande, descripción completa y precio. Tiene que poder cerrarse también sin JS (por ejemplo con un label que actúe de botón "cerrar" vinculado al mismo checkbox, o clickeando afuera con un label que cubra toda la pantalla).
+
+8. ANIMACIONES: hover suave en productos y botones, zoom suave en imágenes al pasar el mouse, y aparición suave de las secciones al hacer scroll (esto último con @keyframes y animation-delay, como ya veníamos usando).
+
+Explicame todo lo que hiciste
+

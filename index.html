@@ -89,53 +89,531 @@
             </div>
         </section>
 
+        <section class="categorias" id="categorias" aria-labelledby="titulo-categorias">
+            <h2 id="titulo-categorias">Explorá por categoría</h2>
+
+            <div class="grilla-categorias">
+                <a href="#" class="tarjeta-categoria">
+                    <span class="categoria-emoji" aria-hidden="true">📱</span>
+                    <span>Celulares</span>
+                </a>
+                <a href="#" class="tarjeta-categoria">
+                    <span class="categoria-emoji" aria-hidden="true">🎧</span>
+                    <span>Audio</span>
+                </a>
+                <a href="#" class="tarjeta-categoria">
+                    <span class="categoria-emoji" aria-hidden="true">💻</span>
+                    <span>Informática</span>
+                </a>
+                <a href="#" class="tarjeta-categoria">
+                    <span class="categoria-emoji" aria-hidden="true">🎮</span>
+                    <span>Gaming</span>
+                </a>
+                <a href="#" class="tarjeta-categoria">
+                    <span class="categoria-emoji" aria-hidden="true">⌚</span>
+                    <span>Smartwatch</span>
+                </a>
+                <a href="#" class="tarjeta-categoria">
+                    <span class="categoria-emoji" aria-hidden="true">🔌</span>
+                    <span>Accesorios</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="ofertas" aria-labelledby="titulo-ofertas">
+            <h2 id="titulo-ofertas">🔥 Ofertas del día</h2>
+
+            <div class="grilla-productos">
+                <div class="contenedor-producto">
+                    <input type="checkbox" id="oferta-s24" class="detalle-trigger" aria-label="Ver detalle de Samsung Galaxy S24">
+                    <article class="tarjeta-producto">
+                        <label for="oferta-s24" class="tarjeta-enlace">
+                            <span class="badge badge--descuento">-18%</span>
+                            <figure>
+                                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Samsung_Galaxy_S24.jpg" alt="Imagen del celular Samsung Galaxy S24" width="300" height="200">
+                            </figure>
+                            <h3>Samsung Galaxy S24</h3>
+                            <p>Celular 256GB, cámara de 50MP.</p>
+                            <p class="precio-previo">$1.099.999</p>
+                        </label>
+                        <p class="precio">$899.999</p>
+                        <button type="button">Agregar al carrito</button>
+                    </article>
+                    <div class="detalle-modal" role="dialog" aria-modal="true" aria-labelledby="titulo-oferta-s24">
+                        <label for="oferta-s24" class="detalle-fondo" aria-label="Cerrar detalle"></label>
+                        <div class="detalle-modal__caja">
+                            <label for="oferta-s24" class="detalle-cerrar" role="button">✕ Cerrar</label>
+                            <figure>
+                                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Samsung_Galaxy_S24.jpg" alt="Imagen del celular Samsung Galaxy S24">
+                            </figure>
+                            <div class="detalle-modal__info">
+                                <h3 id="titulo-oferta-s24">Samsung Galaxy S24</h3>
+                                <p class="detalle-descripcion">Celular de alta gama con 256GB de almacenamiento, cámara profesional de 50MP, pantalla AMOLED de 6.2" y batería para todo el día. Incluye carga rápida y 5 años de actualizaciones.</p>
+                                <p class="precio-previo">$1.099.999</p>
+                                <p class="detalle-precio">$899.999 <small>-18%</small></p>
+                                <button type="button" class="detalle-comprar">Comprar ahora</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contenedor-producto">
+                    <input type="checkbox" id="oferta-lenovo" class="detalle-trigger" aria-label="Ver detalle de Lenovo IdeaPad 5">
+                    <article class="tarjeta-producto">
+                        <label for="oferta-lenovo" class="tarjeta-enlace">
+                            <span class="badge badge--descuento">-21%</span>
+                            <figure>
+                                <img src="https://cdn.mos.cms.futurecdn.net/gKv6krJwHJ6ozNKhzF3wiW-1200-80.jpg" alt="Imagen del notebook Lenovo IdeaPad 5" width="300" height="200">
+                            </figure>
+                            <h3>Lenovo IdeaPad 5</h3>
+                            <p>Notebook 16GB RAM, SSD 512GB.</p>
+                            <p class="precio-previo">$950.000</p>
+                        </label>
+                        <p class="precio">$750.000</p>
+                        <button type="button">Agregar al carrito</button>
+                    </article>
+                    <div class="detalle-modal" role="dialog" aria-modal="true" aria-labelledby="titulo-oferta-lenovo">
+                        <label for="oferta-lenovo" class="detalle-fondo" aria-label="Cerrar detalle"></label>
+                        <div class="detalle-modal__caja">
+                            <label for="oferta-lenovo" class="detalle-cerrar" role="button">✕ Cerrar</label>
+                            <figure>
+                                <img src="https://cdn.mos.cms.futurecdn.net/gKv6krJwHJ6ozNKhzF3wiW-1200-80.jpg" alt="Imagen del notebook Lenovo IdeaPad 5">
+                            </figure>
+                            <div class="detalle-modal__info">
+                                <h3 id="titulo-oferta-lenovo">Lenovo IdeaPad 5</h3>
+                                <p class="detalle-descripcion">Notebook con procesador AMD Ryzen, 16GB de RAM y SSD de 512GB. Pantalla Full HD de 15.6", ideal para estudio y trabajo. Incluye teclado retroiluminado y hasta 12 hs de batería.</p>
+                                <p class="precio-previo">$950.000</p>
+                                <p class="detalle-precio">$750.000 <small>-21%</small></p>
+                                <button type="button" class="detalle-comprar">Comprar ahora</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contenedor-producto">
+                    <input type="checkbox" id="oferta-sony" class="detalle-trigger" aria-label="Ver detalle de Sony WH-1000XM5">
+                    <article class="tarjeta-producto">
+                        <label for="oferta-sony" class="tarjeta-enlace">
+                            <span class="badge badge--descuento">-19%</span>
+                            <figure>
+                                <img src="https://cdn.mos.cms.futurecdn.net/uFyxeHLkjzqKWUqv6iynH9.jpeg" alt="Imagen de auriculares Sony WH-1000XM5" width="300" height="200">
+                            </figure>
+                            <h3>Sony WH-1000XM5</h3>
+                            <p>Auriculares bluetooth con cancelación de ruido.</p>
+                            <p class="precio-previo">$520.000</p>
+                        </label>
+                        <p class="precio">$420.500</p>
+                        <button type="button">Agregar al carrito</button>
+                    </article>
+                    <div class="detalle-modal" role="dialog" aria-modal="true" aria-labelledby="titulo-oferta-sony">
+                        <label for="oferta-sony" class="detalle-fondo" aria-label="Cerrar detalle"></label>
+                        <div class="detalle-modal__caja">
+                            <label for="oferta-sony" class="detalle-cerrar" role="button">✕ Cerrar</label>
+                            <figure>
+                                <img src="https://cdn.mos.cms.futurecdn.net/uFyxeHLkjzqKWUqv6iynH9.jpeg" alt="Imagen de auriculares Sony WH-1000XM5">
+                            </figure>
+                            <div class="detalle-modal__info">
+                                <h3 id="titulo-oferta-sony">Sony WH-1000XM5</h3>
+                                <p class="detalle-descripcion">Auriculares inalámbricos con cancelación activa de ruido líder en el mercado, hasta 30 hs de batería, sonido de alta resolución y micrófonos para llamadas nítidas.</p>
+                                <p class="precio-previo">$520.000</p>
+                                <p class="detalle-precio">$420.500 <small>-19%</small></p>
+                                <button type="button" class="detalle-comprar">Comprar ahora</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contenedor-producto">
+                    <input type="checkbox" id="oferta-xiaomi" class="detalle-trigger" aria-label="Ver detalle de Xiaomi Watch S3">
+                    <article class="tarjeta-producto">
+                        <label for="oferta-xiaomi" class="tarjeta-enlace">
+                            <span class="badge badge--descuento">-20%</span>
+                            <figure>
+                                <img src="https://fdn2.gsmarena.com/vv/bigpic/xiaomi-watch-s3.jpg" alt="Imagen del smartwatch Xiaomi Watch S3" width="300" height="200">
+                            </figure>
+                            <h3>Xiaomi Watch S3</h3>
+                            <p>Smartwatch GPS, batería de 15 días.</p>
+                            <p class="precio-previo">$230.000</p>
+                        </label>
+                        <p class="precio">$185.000</p>
+                        <button type="button">Agregar al carrito</button>
+                    </article>
+                    <div class="detalle-modal" role="dialog" aria-modal="true" aria-labelledby="titulo-oferta-xiaomi">
+                        <label for="oferta-xiaomi" class="detalle-fondo" aria-label="Cerrar detalle"></label>
+                        <div class="detalle-modal__caja">
+                            <label for="oferta-xiaomi" class="detalle-cerrar" role="button">✕ Cerrar</label>
+                            <figure>
+                                <img src="https://fdn2.gsmarena.com/vv/bigpic/xiaomi-watch-s3.jpg" alt="Imagen del smartwatch Xiaomi Watch S3">
+                            </figure>
+                            <div class="detalle-modal__info">
+                                <h3 id="titulo-oferta-xiaomi">Xiaomi Watch S3</h3>
+                                <p class="detalle-descripcion">Smartwatch con GPS integrado, más de 120 modos de deporte, medición de oxígeno en sangre y batería de hasta 15 días de uso normal. Compatible con Android e iOS.</p>
+                                <p class="precio-previo">$230.000</p>
+                                <p class="detalle-precio">$185.000 <small>-20%</small></p>
+                                <button type="button" class="detalle-comprar">Comprar ahora</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mas-vendidos" aria-labelledby="titulo-vendidos">
+            <h2 id="titulo-vendidos">⭐ Más vendidos</h2>
+
+            <div class="grilla-productos">
+                <div class="contenedor-producto">
+                    <input type="checkbox" id="vendido-audifonos" class="detalle-trigger" aria-label="Ver detalle de Audífonos Gamer RGB">
+                    <article class="tarjeta-producto">
+                        <label for="vendido-audifonos" class="tarjeta-enlace">
+                            <span class="badge badge--ranking">#1</span>
+                            <figure>
+                                <img src="https://placehold.co/300x200/ffffff/d32f2f?text=Audifonos+Gamer" alt="Imagen de audífonos gamer RGB" width="300" height="200">
+                            </figure>
+                            <h3>Audífonos Gamer RGB</h3>
+                            <p>Sonido 7.1 envolvente, micrófono retráctil.</p>
+                            <p class="precio-previo">$110.000</p>
+                        </label>
+                        <p class="precio">$89.999</p>
+                        <button type="button">Agregar al carrito</button>
+                    </article>
+                    <div class="detalle-modal" role="dialog" aria-modal="true" aria-labelledby="titulo-vendido-audifonos">
+                        <label for="vendido-audifonos" class="detalle-fondo" aria-label="Cerrar detalle"></label>
+                        <div class="detalle-modal__caja">
+                            <label for="vendido-audifonos" class="detalle-cerrar" role="button">✕ Cerrar</label>
+                            <figure>
+                                <img src="https://placehold.co/300x200/ffffff/d32f2f?text=Audifonos+Gamer" alt="Imagen de audífonos gamer RGB">
+                            </figure>
+                            <div class="detalle-modal__info">
+                                <h3 id="titulo-vendido-audifonos">Audífonos Gamer RGB</h3>
+                                <p class="detalle-descripcion">Audífonos con sonido envolvente 7.1, diadema acolchada, micrófono retráctil con cancelación de ruido e iluminación RGB personalizable.</p>
+                                <p class="precio-previo">$110.000</p>
+                                <p class="detalle-precio">$89.999 <small>-18%</small></p>
+                                <button type="button" class="detalle-comprar">Comprar ahora</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contenedor-producto">
+                    <input type="checkbox" id="vendido-teclado" class="detalle-trigger" aria-label="Ver detalle de Teclado Mecánico Redragon">
+                    <article class="tarjeta-producto">
+                        <label for="vendido-teclado" class="tarjeta-enlace">
+                            <span class="badge badge--ranking">#2</span>
+                            <figure>
+                                <img src="https://placehold.co/300x200/ffffff/d32f2f?text=Teclado+Mecanico" alt="Imagen de teclado mecánico Redragon" width="300" height="200">
+                            </figure>
+                            <h3>Teclado Mecánico Redragon</h3>
+                            <p>Switches rojos, retroiluminación RGB.</p>
+                            <p class="precio-previo">$80.000</p>
+                        </label>
+                        <p class="precio">$64.500</p>
+                        <button type="button">Agregar al carrito</button>
+                    </article>
+                    <div class="detalle-modal" role="dialog" aria-modal="true" aria-labelledby="titulo-vendido-teclado">
+                        <label for="vendido-teclado" class="detalle-fondo" aria-label="Cerrar detalle"></label>
+                        <div class="detalle-modal__caja">
+                            <label for="vendido-teclado" class="detalle-cerrar" role="button">✕ Cerrar</label>
+                            <figure>
+                                <img src="https://placehold.co/300x200/ffffff/d32f2f?text=Teclado+Mecanico" alt="Imagen de teclado mecánico Redragon">
+                            </figure>
+                            <div class="detalle-modal__info">
+                                <h3 id="titulo-vendido-teclado">Teclado Mecánico Redragon</h3>
+                                <p class="detalle-descripcion">Teclado compacto con switches mecánicos rojos, retroiluminación RGB configurable, estructura reforzada y 100% anti-ghosting.</p>
+                                <p class="precio-previo">$80.000</p>
+                                <p class="detalle-precio">$64.500 <small>-19%</small></p>
+                                <button type="button" class="detalle-comprar">Comprar ahora</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contenedor-producto">
+                    <input type="checkbox" id="vendido-mouse" class="detalle-trigger" aria-label="Ver detalle de Mouse Inalámbrico Logitech">
+                    <article class="tarjeta-producto">
+                        <label for="vendido-mouse" class="tarjeta-enlace">
+                            <span class="badge badge--ranking">#3</span>
+                            <figure>
+                                <img src="https://placehold.co/300x200/ffffff/d32f2f?text=Mouse+Inalambrico" alt="Imagen de mouse inalámbrico Logitech" width="300" height="200">
+                            </figure>
+                            <h3>Mouse Inalámbrico Logitech</h3>
+                            <p>Sensor óptico 4000 DPI, 2 años de pila.</p>
+                            <p class="precio-previo">$45.000</p>
+                        </label>
+                        <p class="precio">$32.900</p>
+                        <button type="button">Agregar al carrito</button>
+                    </article>
+                    <div class="detalle-modal" role="dialog" aria-modal="true" aria-labelledby="titulo-vendido-mouse">
+                        <label for="vendido-mouse" class="detalle-fondo" aria-label="Cerrar detalle"></label>
+                        <div class="detalle-modal__caja">
+                            <label for="vendido-mouse" class="detalle-cerrar" role="button">✕ Cerrar</label>
+                            <figure>
+                                <img src="https://placehold.co/300x200/ffffff/d32f2f?text=Mouse+Inalambrico" alt="Imagen de mouse inalámbrico Logitech">
+                            </figure>
+                            <div class="detalle-modal__info">
+                                <h3 id="titulo-vendido-mouse">Mouse Inalámbrico Logitech</h3>
+                                <p class="detalle-descripcion">Mouse inalámbrico con sensor de 4000 DPI ajustable, diseño ergonómico silencioso y batería de hasta 2 años con una sola pila AA.</p>
+                                <p class="precio-previo">$45.000</p>
+                                <p class="detalle-precio">$32.900 <small>-27%</small></p>
+                                <button type="button" class="detalle-comprar">Comprar ahora</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contenedor-producto">
+                    <input type="checkbox" id="vendido-monitor" class="detalle-trigger" aria-label="Ver detalle de Monitor Samsung 27 144Hz">
+                    <article class="tarjeta-producto">
+                        <label for="vendido-monitor" class="tarjeta-enlace">
+                            <span class="badge badge--ranking">#4</span>
+                            <figure>
+                                <img src="https://placehold.co/300x200/ffffff/d32f2f?text=Monitor+27+144Hz" alt="Imagen de monitor Samsung de 27 pulgadas" width="300" height="200">
+                            </figure>
+                            <h3>Monitor Samsung 27" 144Hz</h3>
+                            <p>Panel IPS, resolución Full HD.</p>
+                            <p class="precio-previo">$470.000</p>
+                        </label>
+                        <p class="precio">$389.000</p>
+                        <button type="button">Agregar al carrito</button>
+                    </article>
+                    <div class="detalle-modal" role="dialog" aria-modal="true" aria-labelledby="titulo-vendido-monitor">
+                        <label for="vendido-monitor" class="detalle-fondo" aria-label="Cerrar detalle"></label>
+                        <div class="detalle-modal__caja">
+                            <label for="vendido-monitor" class="detalle-cerrar" role="button">✕ Cerrar</label>
+                            <figure>
+                                <img src="https://placehold.co/300x200/ffffff/d32f2f?text=Monitor+27+144Hz" alt="Imagen de monitor Samsung de 27 pulgadas">
+                            </figure>
+                            <div class="detalle-modal__info">
+                                <h3 id="titulo-vendido-monitor">Monitor Samsung 27" 144Hz</h3>
+                                <p class="detalle-descripcion">Monitor gamer de 27 pulgadas con panel IPS Full HD, 144Hz de refresco, 1ms de respuesta y compatibilidad FreeSync para una imagen sin cortes.</p>
+                                <p class="precio-previo">$470.000</p>
+                                <p class="detalle-precio">$389.000 <small>-17%</small></p>
+                                <button type="button" class="detalle-comprar">Comprar ahora</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contenedor-producto">
+                    <input type="checkbox" id="vendido-webcam" class="detalle-trigger" aria-label="Ver detalle de Webcam Full HD">
+                    <article class="tarjeta-producto">
+                        <label for="vendido-webcam" class="tarjeta-enlace">
+                            <span class="badge badge--ranking">#5</span>
+                            <figure>
+                                <img src="https://placehold.co/300x200/ffffff/d32f2f?text=Webcam+Full+HD" alt="Imagen de webcam Full HD" width="300" height="200">
+                            </figure>
+                            <h3>Webcam Full HD</h3>
+                            <p>1080p, micrófono integrado, plug and play.</p>
+                            <p class="precio-previo">$55.000</p>
+                        </label>
+                        <p class="precio">$45.000</p>
+                        <button type="button">Agregar al carrito</button>
+                    </article>
+                    <div class="detalle-modal" role="dialog" aria-modal="true" aria-labelledby="titulo-vendido-webcam">
+                        <label for="vendido-webcam" class="detalle-fondo" aria-label="Cerrar detalle"></label>
+                        <div class="detalle-modal__caja">
+                            <label for="vendido-webcam" class="detalle-cerrar" role="button">✕ Cerrar</label>
+                            <figure>
+                                <img src="https://placehold.co/300x200/ffffff/d32f2f?text=Webcam+Full+HD" alt="Imagen de webcam Full HD">
+                            </figure>
+                            <div class="detalle-modal__info">
+                                <h3 id="titulo-vendido-webcam">Webcam Full HD</h3>
+                                <p class="detalle-descripcion">Webcam con resolución 1080p, corrección de luz automática, micrófono con reducción de ruido y montaje universal para monitor o trípode.</p>
+                                <p class="precio-previo">$55.000</p>
+                                <p class="detalle-precio">$45.000 <small>-18%</small></p>
+                                <button type="button" class="detalle-comprar">Comprar ahora</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="beneficios" aria-labelledby="titulo-beneficios">
+            <h2 id="titulo-beneficios">¿Por qué comprar en Thi.store?</h2>
+
+            <ul class="lista-beneficios">
+                <li class="beneficio">
+                    <span class="beneficio-emoji" aria-hidden="true">🚚</span>
+                    <div>
+                        <strong>Envíos a todo el país</strong>
+                        <small>Llegamos a tu puerta en 24/48 hs.</small>
+                    </div>
+                </li>
+                <li class="beneficio">
+                    <span class="beneficio-emoji" aria-hidden="true">🔒</span>
+                    <div>
+                        <strong>Compra segura</strong>
+                        <small>Pagos protegidos de punta a punta.</small>
+                    </div>
+                </li>
+                <li class="beneficio">
+                    <span class="beneficio-emoji" aria-hidden="true">💳</span>
+                    <div>
+                        <strong>Hasta 12 cuotas</strong>
+                        <small>Sin interés con todos los bancos.</small>
+                    </div>
+                </li>
+                <li class="beneficio">
+                    <span class="beneficio-emoji" aria-hidden="true">🛡️</span>
+                    <div>
+                        <strong>Garantía</strong>
+                        <small>12 meses de garantía oficial.</small>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="recomienda" aria-labelledby="titulo-recomienda">
+            <h2 id="titulo-recomienda">Thi.store recomienda</h2>
+
+            <article class="tarjeta-recomienda">
+                <figure>
+                    <img src="https://cdn.mos.cms.futurecdn.net/uFyxeHLkjzqKWUqv6iynH9.jpeg" alt="Imagen de auriculares Sony WH-1000XM5 recomendados por Thi.store">
+                </figure>
+                <div class="recomienda__info">
+                    <h3>Sony WH-1000XM5</h3>
+                    <p class="estrellas" aria-label="Valoración 4.9 de 5">★★★★★ <span class="valor">4.9 (2.300+ reseñas)</span></p>
+                    <ul class="recomienda-caracteristicas">
+                        <li>Cancelación de ruido activa líder en el mercado</li>
+                        <li>Hasta 30 hs de batería con USB-C y carga rápida</li>
+                        <li>Sonido de alta resolución inalámbrico</li>
+                        <li>Micrófonos inteligentes para llamadas nítidas</li>
+                    </ul>
+                    <p class="precio-previo">$520.000</p>
+                    <p class="recomienda-precio">$420.500</p>
+                    <button type="button" class="recomienda-comprar">Comprar ahora</button>
+                </div>
+            </article>
+        </section>
+
         <section class="productos-destacados" aria-labelledby="titulo-destacados">
             <h2 id="titulo-destacados">Productos destacados</h2>
 
             <div class="grilla-productos">
-                <article class="tarjeta-producto">
-                    <span class="badge">Nuevo</span>
-                    <figure>
-                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Samsung_Galaxy_S24.jpg" alt="Imagen del celular Samsung Galaxy S24" width="300" height="200">
-                    </figure>
-                    <h3>Samsung Galaxy S24</h3>
-                    <p>Celular 256GB, cámara de 50MP.</p>
-                    <p class="precio">$899.999</p>
-                    <button type="button">Agregar al carrito</button>
-                </article>
+                <div class="contenedor-producto">
+                    <input type="checkbox" id="dest-s24" class="detalle-trigger" aria-label="Ver detalle de Samsung Galaxy S24">
+                    <article class="tarjeta-producto">
+                        <label for="dest-s24" class="tarjeta-enlace">
+                            <span class="badge">Nuevo</span>
+                            <figure>
+                                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Samsung_Galaxy_S24.jpg" alt="Imagen del celular Samsung Galaxy S24" width="300" height="200">
+                            </figure>
+                            <h3>Samsung Galaxy S24</h3>
+                            <p>Celular 256GB, cámara de 50MP.</p>
+                        </label>
+                        <p class="precio">$899.999</p>
+                        <button type="button">Agregar al carrito</button>
+                    </article>
+                    <div class="detalle-modal" role="dialog" aria-modal="true" aria-labelledby="titulo-dest-s24">
+                        <label for="dest-s24" class="detalle-fondo" aria-label="Cerrar detalle"></label>
+                        <div class="detalle-modal__caja">
+                            <label for="dest-s24" class="detalle-cerrar" role="button">✕ Cerrar</label>
+                            <figure>
+                                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Samsung_Galaxy_S24.jpg" alt="Imagen del celular Samsung Galaxy S24">
+                            </figure>
+                            <div class="detalle-modal__info">
+                                <h3 id="titulo-dest-s24">Samsung Galaxy S24</h3>
+                                <p class="detalle-descripcion">Celular de alta gama con 256GB de almacenamiento, cámara profesional de 50MP, pantalla AMOLED de 6.2" y batería para todo el día.</p>
+                                <p class="detalle-precio">$899.999</p>
+                                <button type="button" class="detalle-comprar">Comprar ahora</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                <article class="tarjeta-producto">
-                    <span class="badge badge--oferta">Oferta</span>
-                    <figure>
-                        <img src="https://cdn.mos.cms.futurecdn.net/gKv6krJwHJ6ozNKhzF3wiW-1200-80.jpg" alt="Imagen del notebook Lenovo IdeaPad 5" width="300" height="200">
-                    </figure>
-                    <h3>Lenovo IdeaPad 5</h3>
-                    <p>Notebook 16GB RAM, SSD 512GB.</p>
-                    <p class="precio">$750.000</p>
-                    <button type="button">Agregar al carrito</button>
-                </article>
+                <div class="contenedor-producto">
+                    <input type="checkbox" id="dest-lenovo" class="detalle-trigger" aria-label="Ver detalle de Lenovo IdeaPad 5">
+                    <article class="tarjeta-producto">
+                        <label for="dest-lenovo" class="tarjeta-enlace">
+                            <span class="badge badge--oferta">Oferta</span>
+                            <figure>
+                                <img src="https://cdn.mos.cms.futurecdn.net/gKv6krJwHJ6ozNKhzF3wiW-1200-80.jpg" alt="Imagen del notebook Lenovo IdeaPad 5" width="300" height="200">
+                            </figure>
+                            <h3>Lenovo IdeaPad 5</h3>
+                            <p>Notebook 16GB RAM, SSD 512GB.</p>
+                        </label>
+                        <p class="precio">$750.000</p>
+                        <button type="button">Agregar al carrito</button>
+                    </article>
+                    <div class="detalle-modal" role="dialog" aria-modal="true" aria-labelledby="titulo-dest-lenovo">
+                        <label for="dest-lenovo" class="detalle-fondo" aria-label="Cerrar detalle"></label>
+                        <div class="detalle-modal__caja">
+                            <label for="dest-lenovo" class="detalle-cerrar" role="button">✕ Cerrar</label>
+                            <figure>
+                                <img src="https://cdn.mos.cms.futurecdn.net/gKv6krJwHJ6ozNKhzF3wiW-1200-80.jpg" alt="Imagen del notebook Lenovo IdeaPad 5">
+                            </figure>
+                            <div class="detalle-modal__info">
+                                <h3 id="titulo-dest-lenovo">Lenovo IdeaPad 5</h3>
+                                <p class="detalle-descripcion">Notebook con procesador AMD Ryzen, 16GB de RAM y SSD de 512GB. Pantalla Full HD de 15.6", ideal para estudio y trabajo.</p>
+                                <p class="detalle-precio">$750.000</p>
+                                <button type="button" class="detalle-comprar">Comprar ahora</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                <article class="tarjeta-producto">
-                    <span class="badge">Nuevo</span>
-                    <figure>
-                        <img src="https://cdn.mos.cms.futurecdn.net/uFyxeHLkjzqKWUqv6iynH9.jpeg" alt="Imagen de auriculares Sony WH-1000XM5" width="300" height="200">
-                    </figure>
-                    <h3>Sony WH-1000XM5</h3>
-                    <p>Auriculares bluetooth con cancelación de ruido.</p>
-                    <p class="precio">$420.500</p>
-                    <button type="button">Agregar al carrito</button>
-                </article>
+                <div class="contenedor-producto">
+                    <input type="checkbox" id="dest-sony" class="detalle-trigger" aria-label="Ver detalle de Sony WH-1000XM5">
+                    <article class="tarjeta-producto">
+                        <label for="dest-sony" class="tarjeta-enlace">
+                            <span class="badge">Nuevo</span>
+                            <figure>
+                                <img src="https://cdn.mos.cms.futurecdn.net/uFyxeHLkjzqKWUqv6iynH9.jpeg" alt="Imagen de auriculares Sony WH-1000XM5" width="300" height="200">
+                            </figure>
+                            <h3>Sony WH-1000XM5</h3>
+                            <p>Auriculares bluetooth con cancelación de ruido.</p>
+                        </label>
+                        <p class="precio">$420.500</p>
+                        <button type="button">Agregar al carrito</button>
+                    </article>
+                    <div class="detalle-modal" role="dialog" aria-modal="true" aria-labelledby="titulo-dest-sony">
+                        <label for="dest-sony" class="detalle-fondo" aria-label="Cerrar detalle"></label>
+                        <div class="detalle-modal__caja">
+                            <label for="dest-sony" class="detalle-cerrar" role="button">✕ Cerrar</label>
+                            <figure>
+                                <img src="https://cdn.mos.cms.futurecdn.net/uFyxeHLkjzqKWUqv6iynH9.jpeg" alt="Imagen de auriculares Sony WH-1000XM5">
+                            </figure>
+                            <div class="detalle-modal__info">
+                                <h3 id="titulo-dest-sony">Sony WH-1000XM5</h3>
+                                <p class="detalle-descripcion">Auriculares inalámbricos con cancelación activa de ruido, hasta 30 hs de batería y sonido de alta resolución.</p>
+                                <p class="detalle-precio">$420.500</p>
+                                <button type="button" class="detalle-comprar">Comprar ahora</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                <article class="tarjeta-producto">
-                    <span class="badge badge--oferta">Oferta</span>
-                    <figure>
-                        <img src="https://fdn2.gsmarena.com/vv/bigpic/xiaomi-watch-s3.jpg" alt="Imagen del smartwatch Xiaomi Watch S3" width="300" height="200">
-                    </figure>
-                    <h3>Xiaomi Watch S3</h3>
-                    <p>Smartwatch GPS, batería de 15 días.</p>
-                    <p class="precio">$185.000</p>
-                    <button type="button">Agregar al carrito</button>
-                </article>
+                <div class="contenedor-producto">
+                    <input type="checkbox" id="dest-xiaomi" class="detalle-trigger" aria-label="Ver detalle de Xiaomi Watch S3">
+                    <article class="tarjeta-producto">
+                        <label for="dest-xiaomi" class="tarjeta-enlace">
+                            <span class="badge badge--oferta">Oferta</span>
+                            <figure>
+                                <img src="https://fdn2.gsmarena.com/vv/bigpic/xiaomi-watch-s3.jpg" alt="Imagen del smartwatch Xiaomi Watch S3" width="300" height="200">
+                            </figure>
+                            <h3>Xiaomi Watch S3</h3>
+                            <p>Smartwatch GPS, batería de 15 días.</p>
+                        </label>
+                        <p class="precio">$185.000</p>
+                        <button type="button">Agregar al carrito</button>
+                    </article>
+                    <div class="detalle-modal" role="dialog" aria-modal="true" aria-labelledby="titulo-dest-xiaomi">
+                        <label for="dest-xiaomi" class="detalle-fondo" aria-label="Cerrar detalle"></label>
+                        <div class="detalle-modal__caja">
+                            <label for="dest-xiaomi" class="detalle-cerrar" role="button">✕ Cerrar</label>
+                            <figure>
+                                <img src="https://fdn2.gsmarena.com/vv/bigpic/xiaomi-watch-s3.jpg" alt="Imagen del smartwatch Xiaomi Watch S3">
+                            </figure>
+                            <div class="detalle-modal__info">
+                                <h3 id="titulo-dest-xiaomi">Xiaomi Watch S3</h3>
+                                <p class="detalle-descripcion">Smartwatch con GPS integrado, más de 120 modos de deporte y batería de hasta 15 días de uso normal.</p>
+                                <p class="detalle-precio">$185.000</p>
+                                <button type="button" class="detalle-comprar">Comprar ahora</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -148,22 +626,22 @@
                     <input type="text" id="nombre" name="nombre" required>
                 </div>
 
-                      <div>
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
 
-                        <div>
-                            <label for="asunto">Asunto:</label>
-                            <select id="asunto" name="asunto" required>
-                                <option value="">Seleccioná un motivo</option>
-                                <option value="consulta">Consulta</option>
-                                <option value="reclamo">Reclamo</option>
-                                <option value="sugerencia">Sugerencia</option>
-                            </select>
-                        </div>
-                    
-                 <div>
+                <div>
+                    <label for="asunto">Asunto:</label>
+                    <select id="asunto" name="asunto" required>
+                        <option value="">Seleccioná un motivo</option>
+                        <option value="consulta">Consulta</option>
+                        <option value="reclamo">Reclamo</option>
+                        <option value="sugerencia">Sugerencia</option>
+                    </select>
+                </div>
+
+                <div>
                     <label for="mensaje">Mensaje:</label>
                     <textarea id="mensaje" name="mensaje" minlength="10" rows="5" required></textarea>
                 </div>
@@ -188,31 +666,73 @@
     </main>
 
     <footer class="pie-pagina">
-        <nav aria-label="Enlaces del pie de página">
-            <h2>Institucional</h2>
-            <ul>
-                <li><a href="#">Sobre nosotros</a></li>
-                <li><a href="#">Términos y condiciones</a></li>
-                <li><a href="#">Políticas de devolución</a></li>
-            </ul>
-        </nav>
+        <div class="pie-columnas">
+            <div class="pie-columna">
+                <h2>Thi.store</h2>
+                <ul>
+                    <li><a href="#">Sobre nosotros</a></li>
+                    <li><a href="#">Cómo comprar</a></li>
+                    <li><a href="#">Trabajá con nosotros</a></li>
+                </ul>
+            </div>
 
-        <address>
-            <h2>Contacto</h2>
-            <p>Email: contacto@thi.store</p>
-            <p>Teléfono: +54 11 1234-5678</p>
-        </address>
+            <div class="pie-columna">
+                <h2>Productos</h2>
+                <ul>
+                    <li><a href="#categorias">Celulares</a></li>
+                    <li><a href="#categorias">Audio</a></li>
+                    <li><a href="#categorias">Informática</a></li>
+                    <li><a href="#categorias">Gaming</a></li>
+                    <li><a href="#categorias">Accesorios</a></li>
+                </ul>
+            </div>
 
-        <div class="redes-sociales">
-            <h2>Seguinos</h2>
-            <ul>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">X</a></li>
-                <li><a href="#">Facebook</a></li>
-            </ul>
+            <div class="pie-columna">
+                <h2>Ayuda</h2>
+                <ul>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                    <li><a href="#">Envíos a todo el país</a></li>
+                    <li><a href="#">Políticas de devolución</a></li>
+                    <li><a href="#">Medios de pago</a></li>
+                </ul>
+            </div>
+
+            <div class="pie-columna redes-sociales">
+                <h2>Seguinos</h2>
+                <ul>
+                    <li>
+                        <a href="#" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true">
+                                <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="TikTok">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true">
+                                <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 1.96-.04 3.46-.03-.16-.27-.96-.6-1.29-.88-1.11-2.85-1.55-4.02-.87-1.12.6-1.81 1.83-2.02 3.05-.02.77-.05 1.54.06 2.3.23 1.68 1.48 3.29 3.18 3.72 1.59.34 3.3-.14 4.32-1.35.32-.42.56-.9.72-1.4.09-.25.04-.53.06-.79.04-2.29 0-4.58.01-6.87.98.57 2.03.9 3.1 1.05 2.24.32 4.55-.29 6.11-2.01.66-.73 1.13-1.62 1.33-2.61.07-.36.12-.72.16-1.08z"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="pie-columna">
+                <h2>Contacto</h2>
+                <p>contacto@thi.store</p>
+                <p>+54 11 1234-5678</p>
+                <p>CABA, Argentina</p>
+            </div>
         </div>
 
-        <p>&copy; 2026 Thi.store Todos los derechos reservados.</p>
+        <p class="pie-copyright">&copy; 2026 Thi.store Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
