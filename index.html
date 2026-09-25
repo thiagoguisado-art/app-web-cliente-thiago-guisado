@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <input type="checkbox" id="carrito-abierto" class="carrito-trigger" aria-label="Abrir carrito">
+
     <header class="encabezado">
         <a href="index.html" class="logo">
             <h1>Thi.store</h1>
@@ -35,7 +37,7 @@
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="#contacto">Contacto</a></li>
                 <li>
-                    <a href="#" class="carrito">Carrito (<span id="contador-carrito">0</span>)</a>
+                    <label for="carrito-abierto" class="carrito" role="button" aria-label="Abrir carrito">Carrito (<span id="contador-carrito">2</span>)</label>
                 </li>
             </ul>
         </nav>
@@ -663,6 +665,51 @@
             </video>
         </section>
     </main>
+
+    <div class="carrito-lateral" role="dialog" aria-modal="true" aria-labelledby="titulo-carrito">
+        <label for="carrito-abierto" class="carrito-fondo" aria-label="Cerrar carrito"></label>
+
+        <aside class="carrito-panel">
+            <header class="carrito-panel__encabezado">
+                <h2 id="titulo-carrito">Tu carrito</h2>
+                <label for="carrito-abierto" class="carrito-cerrar" role="button" aria-label="Cerrar carrito">✕</label>
+            </header>
+
+            <ul class="carrito-lista">
+                <li class="carrito-item">
+                    <figure>
+                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Samsung_Galaxy_S24.jpg" alt="Imagen del celular Samsung Galaxy S24" width="84" height="84">
+                    </figure>
+                    <div class="carrito-item__info">
+                        <h3>Samsung Galaxy S24</h3>
+                        <p class="carrito-item__precio">$899.999</p>
+                        <p class="carrito-item__cantidad">Cantidad: <span>1</span></p>
+                        <button type="button" class="carrito-item__eliminar">Eliminar</button>
+                    </div>
+                </li>
+
+                <li class="carrito-item">
+                    <figure>
+                        <img src="https://cdn.mos.cms.futurecdn.net/gKv6krJwHJ6ozNKhzF3wiW-1200-80.jpg" alt="Imagen del notebook Lenovo IdeaPad 5" width="84" height="84">
+                    </figure>
+                    <div class="carrito-item__info">
+                        <h3>Lenovo IdeaPad 5</h3>
+                        <p class="carrito-item__precio">$750.000</p>
+                        <p class="carrito-item__cantidad">Cantidad: <span>1</span></p>
+                        <button type="button" class="carrito-item__eliminar">Eliminar</button>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="carrito-panel__pie">
+                <p class="carrito-total">
+                    <span>Total</span>
+                    <strong>$1.649.999</strong>
+                </p>
+                <button type="button" class="carrito-finalizar">Finalizar compra</button>
+            </div>
+        </aside>
+    </div>
 
     <footer class="pie-pagina">
         <div class="pie-columnas">
