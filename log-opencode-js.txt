@@ -1,0 +1,24 @@
+PROMPT: Creá un archivo nuevo llamado catalogo.js en la raíz del proyecto. NO modifiques index.html ni styles.css. Es JavaScript puro que se prueba con console.log / console.table (sin DOM). Usá const por defecto, arrow functions y métodos modernos de array. Cada punto va separado con un comentario.
+
+1) Catálogo: un array const llamado catalogo con 6 productos como objetos { id, nombre, precio, stock }. Usá los de Thi.store: Samsung Galaxy S24 (899999), Lenovo IdeaPad 5 (750000), Sony WH-1000XM5 (420500), Xiaomi Watch S3 (185000), y sumá 2 más: un Cable USB-C con precio 80 y stock 25, y otro producto con stock 0 para que haya agotados. Usá let solo si realmente modificás un producto.
+
+2) Arrow function precio(n) que reciba un número y devuelva un string con formato '$ 1.234' (separador de miles con punto, estilo es-AR). Probala con console.log sobre un precio y con console.table sobre el catálogo.
+
+3) Recorré el array con for...of y, con if/else, separá los productos en dos arrays: disponibles (stock > 0) y agotados. Mostrá cada grupo con console.log.
+
+4) UNA SOLA LÍNEA encadenando filter y map: los nombres de los productos con precio > 100, todos en mayúsculas. Logueá el resultado.
+
+5) Con reduce y valor inicial 0, calculá el total facturable: suma de precio * stock de todos los productos. Logueá el total y el total con IVA (21%), usando la función precio() del punto 2 para mostrarlos.
+
+Al terminar, explicame qué hace cada callback (filter, map, reduce) y qué pasa en cada caso borde: array vacío, producto con stock 0 y precio que no es número.
+
+rta: Callbacks
+- filter((p) => p.precio > 100): recibe cada producto y devuelve un booleano. Si es true, el producto pasa al nuevo array; no modifica el original.
+- map((p) => p.nombre.toUpperCase()): transforma cada producto en su nombre en mayúsculas. Devuelve un array de la misma longitud.
+- reduce((acumulado, producto) => acumulado + producto.precio * producto.stock, 0): el acumulador arranca en 0 y en cada iteración suma precio * stock, devolviendo un único número.
+Casos borde
+- Array vacío: filter y map devuelven []; for...of no itera; reduce devuelve el valor inicial 0. Sin valor inicial, reduce lanzaría TypeError.
+- Stock 0: el producto sigue existiendo en el catálogo y puede aparecer en filter/map; en el punto 3 cae en agotados y en el total aporta 0.
+- Precio que no es número: p.precio > 100 devuelve false para valores no numéricos (NaN); precio * stock produce NaN y contamina el total de reduce. La función precio() lo detecta y devuelve 'Precio inválido'. Un string numérico como '80' sí se convierte por coerción.
+
+
