@@ -37,7 +37,10 @@
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="#contacto">Contacto</a></li>
                 <li>
-                    <label for="carrito-abierto" class="carrito" role="button" aria-label="Abrir carrito">Carrito (<span id="contador-carrito">2</span>)</label>
+                    <label for="carrito-abierto" class="carrito" role="button" aria-label="Abrir carrito">Carrito (<span id="contador-carrito">0</span>) - <span id="total-carrito">$0</span></label>
+                </li>
+                <li>
+                    <button id="btn-tema" type="button" aria-pressed="false">Modo oscuro</button>
                 </li>
             </ul>
         </nav>
@@ -139,7 +142,7 @@
                             <p class="precio-previo">$1.099.999</p>
                         </label>
                         <p class="precio">$899.999</p>
-                        <button type="button">Agregar al carrito</button>
+                        <button type="button" data-id="1" data-nombre="Samsung Galaxy S24" data-precio="899999">Agregar al carrito</button>
                     </article>
                     <div class="detalle-modal" role="dialog" aria-modal="true" aria-labelledby="titulo-oferta-s24">
                         <label for="oferta-s24" class="detalle-fondo" aria-label="Cerrar detalle"></label>
@@ -172,7 +175,7 @@
                             <p class="precio-previo">$950.000</p>
                         </label>
                         <p class="precio">$750.000</p>
-                        <button type="button">Agregar al carrito</button>
+                        <button type="button" data-id="2" data-nombre="Lenovo IdeaPad 5" data-precio="750000">Agregar al carrito</button>
                     </article>
                     <div class="detalle-modal" role="dialog" aria-modal="true" aria-labelledby="titulo-oferta-lenovo">
                         <label for="oferta-lenovo" class="detalle-fondo" aria-label="Cerrar detalle"></label>
@@ -205,7 +208,7 @@
                             <p class="precio-previo">$520.000</p>
                         </label>
                         <p class="precio">$420.500</p>
-                        <button type="button">Agregar al carrito</button>
+                        <button type="button" data-id="3" data-nombre="Sony WH-1000XM5" data-precio="420500">Agregar al carrito</button>
                     </article>
                     <div class="detalle-modal" role="dialog" aria-modal="true" aria-labelledby="titulo-oferta-sony">
                         <label for="oferta-sony" class="detalle-fondo" aria-label="Cerrar detalle"></label>
@@ -238,7 +241,7 @@
                             <p class="precio-previo">$230.000</p>
                         </label>
                         <p class="precio">$185.000</p>
-                        <button type="button">Agregar al carrito</button>
+                        <button type="button" data-id="4" data-nombre="Xiaomi Watch S3" data-precio="185000">Agregar al carrito</button>
                     </article>
                     <div class="detalle-modal" role="dialog" aria-modal="true" aria-labelledby="titulo-oferta-xiaomi">
                         <label for="oferta-xiaomi" class="detalle-fondo" aria-label="Cerrar detalle"></label>
@@ -277,7 +280,7 @@
                             <p class="precio-previo">$110.000</p>
                         </label>
                         <p class="precio">$89.999</p>
-                        <button type="button">Agregar al carrito</button>
+                        <button type="button" data-id="5" data-nombre="Audífonos Gamer RGB" data-precio="89999">Agregar al carrito</button>
                     </article>
                     <div class="detalle-modal" role="dialog" aria-modal="true" aria-labelledby="titulo-vendido-audifonos">
                         <label for="vendido-audifonos" class="detalle-fondo" aria-label="Cerrar detalle"></label>
@@ -310,7 +313,7 @@
                             <p class="precio-previo">$80.000</p>
                         </label>
                         <p class="precio">$64.500</p>
-                        <button type="button">Agregar al carrito</button>
+                        <button type="button" data-id="6" data-nombre="Teclado Mecánico Redragon" data-precio="64500">Agregar al carrito</button>
                     </article>
                     <div class="detalle-modal" role="dialog" aria-modal="true" aria-labelledby="titulo-vendido-teclado">
                         <label for="vendido-teclado" class="detalle-fondo" aria-label="Cerrar detalle"></label>
@@ -343,7 +346,7 @@
                             <p class="precio-previo">$45.000</p>
                         </label>
                         <p class="precio">$32.900</p>
-                        <button type="button">Agregar al carrito</button>
+                        <button type="button" data-id="7" data-nombre="Mouse Inalámbrico Logitech" data-precio="32900">Agregar al carrito</button>
                     </article>
                     <div class="detalle-modal" role="dialog" aria-modal="true" aria-labelledby="titulo-vendido-mouse">
                         <label for="vendido-mouse" class="detalle-fondo" aria-label="Cerrar detalle"></label>
@@ -376,7 +379,7 @@
                             <p class="precio-previo">$470.000</p>
                         </label>
                         <p class="precio">$389.000</p>
-                        <button type="button">Agregar al carrito</button>
+                        <button type="button" data-id="8" data-nombre="Monitor Samsung 27 144Hz" data-precio="389000">Agregar al carrito</button>
                     </article>
                     <div class="detalle-modal" role="dialog" aria-modal="true" aria-labelledby="titulo-vendido-monitor">
                         <label for="vendido-monitor" class="detalle-fondo" aria-label="Cerrar detalle"></label>
@@ -409,7 +412,7 @@
                             <p class="precio-previo">$55.000</p>
                         </label>
                         <p class="precio">$45.000</p>
-                        <button type="button">Agregar al carrito</button>
+                        <button type="button" data-id="9" data-nombre="Webcam Full HD" data-precio="45000">Agregar al carrito</button>
                     </article>
                     <div class="detalle-modal" role="dialog" aria-modal="true" aria-labelledby="titulo-vendido-webcam">
                         <label for="vendido-webcam" class="detalle-fondo" aria-label="Cerrar detalle"></label>
@@ -504,7 +507,7 @@
                             <p>Celular 256GB, cámara de 50MP.</p>
                         </label>
                         <p class="precio">$899.999</p>
-                        <button type="button">Agregar al carrito</button>
+                        <button type="button" data-id="1" data-nombre="Samsung Galaxy S24" data-precio="899999">Agregar al carrito</button>
                     </article>
                     <div class="detalle-modal" role="dialog" aria-modal="true" aria-labelledby="titulo-dest-s24">
                         <label for="dest-s24" class="detalle-fondo" aria-label="Cerrar detalle"></label>
@@ -535,7 +538,7 @@
                             <p>Notebook 16GB RAM, SSD 512GB.</p>
                         </label>
                         <p class="precio">$750.000</p>
-                        <button type="button">Agregar al carrito</button>
+                        <button type="button" data-id="2" data-nombre="Lenovo IdeaPad 5" data-precio="750000">Agregar al carrito</button>
                     </article>
                     <div class="detalle-modal" role="dialog" aria-modal="true" aria-labelledby="titulo-dest-lenovo">
                         <label for="dest-lenovo" class="detalle-fondo" aria-label="Cerrar detalle"></label>
@@ -566,7 +569,7 @@
                             <p>Auriculares bluetooth con cancelación de ruido.</p>
                         </label>
                         <p class="precio">$420.500</p>
-                        <button type="button">Agregar al carrito</button>
+                        <button type="button" data-id="3" data-nombre="Sony WH-1000XM5" data-precio="420500">Agregar al carrito</button>
                     </article>
                     <div class="detalle-modal" role="dialog" aria-modal="true" aria-labelledby="titulo-dest-sony">
                         <label for="dest-sony" class="detalle-fondo" aria-label="Cerrar detalle"></label>
@@ -597,7 +600,7 @@
                             <p>Smartwatch GPS, batería de 15 días.</p>
                         </label>
                         <p class="precio">$185.000</p>
-                        <button type="button">Agregar al carrito</button>
+                        <button type="button" data-id="4" data-nombre="Xiaomi Watch S3" data-precio="185000">Agregar al carrito</button>
                     </article>
                     <div class="detalle-modal" role="dialog" aria-modal="true" aria-labelledby="titulo-dest-xiaomi">
                         <label for="dest-xiaomi" class="detalle-fondo" aria-label="Cerrar detalle"></label>
@@ -675,41 +678,94 @@
                 <label for="carrito-abierto" class="carrito-cerrar" role="button" aria-label="Cerrar carrito">✕</label>
             </header>
 
-            <ul class="carrito-lista">
-                <li class="carrito-item">
-                    <figure>
-                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Samsung_Galaxy_S24.jpg" alt="Imagen del celular Samsung Galaxy S24" width="84" height="84">
-                    </figure>
-                    <div class="carrito-item__info">
-                        <h3>Samsung Galaxy S24</h3>
-                        <p class="carrito-item__precio">$899.999</p>
-                        <p class="carrito-item__cantidad">Cantidad: <span>1</span></p>
-                        <button type="button" class="carrito-item__eliminar">Eliminar</button>
-                    </div>
-                </li>
-
-                <li class="carrito-item">
-                    <figure>
-                        <img src="https://cdn.mos.cms.futurecdn.net/gKv6krJwHJ6ozNKhzF3wiW-1200-80.jpg" alt="Imagen del notebook Lenovo IdeaPad 5" width="84" height="84">
-                    </figure>
-                    <div class="carrito-item__info">
-                        <h3>Lenovo IdeaPad 5</h3>
-                        <p class="carrito-item__precio">$750.000</p>
-                        <p class="carrito-item__cantidad">Cantidad: <span>1</span></p>
-                        <button type="button" class="carrito-item__eliminar">Eliminar</button>
-                    </div>
-                </li>
-            </ul>
+            <ul class="carrito-lista"></ul>
 
             <div class="carrito-panel__pie">
                 <p class="carrito-total">
                     <span>Total</span>
-                    <strong>$1.649.999</strong>
+                    <strong id="total-carrito-panel">$0</strong>
                 </p>
                 <button type="button" class="carrito-finalizar">Finalizar compra</button>
             </div>
         </aside>
     </div>
+
+    <section id="wizard" aria-labelledby="titulo-wizard">
+        <h2 id="titulo-wizard">Datos de envío</h2>
+        <p id="wizard-indicador" aria-live="polite">Paso 1 de 3</p>
+
+        <form id="wizard-form">
+            <fieldset data-paso="1" class="wizard-paso">
+                <legend>Datos personales</legend>
+                <div class="wizard-campo">
+                    <label for="wizard-nombre">Nombre</label>
+                    <input type="text" id="wizard-nombre" name="nombre" required>
+                </div>
+                <div class="wizard-campo">
+                    <label for="wizard-email">Email</label>
+                    <input type="email" id="wizard-email" name="email" required>
+                </div>
+            </fieldset>
+
+            <fieldset data-paso="2" class="wizard-paso" hidden>
+                <legend>Dirección</legend>
+                <div class="wizard-campo">
+                    <label for="wizard-calle">Calle</label>
+                    <input type="text" id="wizard-calle" name="calle" required>
+                </div>
+                <div class="wizard-campo">
+                    <label for="wizard-numero">Número</label>
+                    <input type="text" id="wizard-numero" name="numero" required>
+                </div>
+                <div class="wizard-campo">
+                    <label for="wizard-ciudad">Ciudad</label>
+                    <input type="text" id="wizard-ciudad" name="ciudad" required>
+                </div>
+                <div class="wizard-campo">
+                    <label for="wizard-codigo-postal">Código postal</label>
+                    <input type="text" id="wizard-codigo-postal" name="codigoPostal" required>
+                </div>
+            </fieldset>
+
+            <fieldset data-paso="3" class="wizard-paso" hidden>
+                <legend>Confirmación</legend>
+                <dl class="wizard-resumen">
+                    <div>
+                        <dt>Nombre</dt>
+                        <dd id="resumen-nombre">-</dd>
+                    </div>
+                    <div>
+                        <dt>Email</dt>
+                        <dd id="resumen-email">-</dd>
+                    </div>
+                    <div>
+                        <dt>Calle</dt>
+                        <dd id="resumen-calle">-</dd>
+                    </div>
+                    <div>
+                        <dt>Número</dt>
+                        <dd id="resumen-numero">-</dd>
+                    </div>
+                    <div>
+                        <dt>Ciudad</dt>
+                        <dd id="resumen-ciudad">-</dd>
+                    </div>
+                    <div>
+                        <dt>Código postal</dt>
+                        <dd id="resumen-codigo-postal">-</dd>
+                    </div>
+                </dl>
+                <button type="button" id="wizard-confirmar">Confirmar</button>
+            </fieldset>
+
+            <div class="wizard-nav">
+                <button type="button" id="wizard-atras" hidden>Atrás</button>
+                <button type="button" id="wizard-siguiente">Siguiente</button>
+            </div>
+
+            <p id="wizard-mensaje" role="status" hidden></p>
+        </form>
+    </section>
 
     <footer class="pie-pagina">
         <div class="pie-columnas">
@@ -780,5 +836,17 @@
 
         <p class="pie-copyright">&copy; 2026 Thi.store Todos los derechos reservados.</p>
     </footer>
+
+    <script src="storage.js"></script>
+    <script src="carrito.js"></script>
+    <script src="tema.js"></script>
+    <script src="wizard.js"></script>
+
+    <div id="banner-cookies" role="dialog" aria-label="Aviso de cookies" hidden>
+        <p>Usamos cookies para recordar tu preferencia. ¿Aceptás?</p>
+        <button id="btn-aceptar-cookies" type="button">Aceptar cookies</button>
+    </div>
+
+    <script src="cookies.js"></script>
 </body>
 </html>
