@@ -1173,3 +1173,38 @@ body:has(.carrito-trigger:checked) {
     color: #9ca3af;
     font-size: 0.9rem;
 }
+
+/* ===== Usuarios (práctica fetch) ===== */
+
+.usuarios-practica {
+    max-width: 900px;
+    margin: 2.5rem auto;
+    padding: 1.5rem;
+    background-color: var(--color-superficie);
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra);
+}
+
+.usuarios-practica h2 {
+    margin-bottom: 1rem;
+    color: var(--color-rojo);
+}
+
+.usuarios-practica #spinner {
+    margin-bottom: 1rem;
+    color: var(--color-texto-suave);
+}
+
+.usuarios-practica #lista {
+    list-style: none;
+}
+
+.usuarios-practica #lista li {
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid var(--color-borde);
+    color: var(--color-texto);
+}
+
+.usuarios-practica #lista li:last-child {
+    border-bottom: none;
+}

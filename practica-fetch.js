@@ -23,6 +23,12 @@ function cargarEmailsConThen() {
 
 // Versión con async/await: el código se lee de arriba a abajo, sin encadenar .then()
 async function cargarEmailsAsync() {
+  const spinner = document.getElementById('spinner');
+  const lista = document.getElementById('lista');
+
+  // Mostramos el spinner antes de empezar la petición
+  spinner.hidden = false;
+
   // try: acá va el flujo normal, esperando cada promesa con await
   try {
     const res = await fetch('https://jsonplaceholder.typicode.com/users');
@@ -35,13 +41,24 @@ async function cargarEmailsAsync() {
     // await reemplaza al segundo .then(): esperamos el JSON ya parseado
     const usuarios = await res.json();
 
-    // Mostramos solo los emails, uno por línea
+    // Limpiamos la lista para no duplicar elementos si se vuelve a ejecutar
+    lista.innerHTML = '';
+
     usuarios.forEach((usuario) => {
+      // Mostramos solo los emails, uno por línea
       console.log(usuario.email);
+
+      // Creamos un <li> con el nombre y el email de cada usuario
+      const item = document.createElement('li');
+      item.textContent = usuario.name + ' - ' + usuario.email;
+      lista.appendChild(item);
     });
   } catch (error) {
     // catch reemplaza al .catch(): atrapa errores de red, status o parseo
     console.error(error);
+  } finally {
+    // finally: ocultamos el spinner salga bien o falle
+    spinner.hidden = true;
   }
 }
 
