@@ -767,6 +767,14 @@
         </form>
     </section>
 
+    <section class="usuarios-practica" aria-labelledby="titulo-usuarios-practica">
+        <h2 id="titulo-usuarios-practica">Usuarios (práctica fetch)</h2>
+        <p id="spinner" hidden>Cargando usuarios...</p>
+        <ul id="lista"></ul>
+        <button id="btn-error" type="button">Probar error 404</button>
+        <p id="mensaje-error" hidden></p>
+    </section>
+
     <footer class="pie-pagina">
         <div class="pie-columnas">
             <div class="pie-columna">
@@ -837,16 +845,16 @@
         <p class="pie-copyright">&copy; 2026 Thi.store Todos los derechos reservados.</p>
     </footer>
 
-    <script src="storage.js"></script>
-    <script src="carrito.js"></script>
-    <script src="tema.js"></script>
-    <script src="wizard.js"></script>
-
     <div id="banner-cookies" role="dialog" aria-label="Aviso de cookies" hidden>
         <p>Usamos cookies para recordar tu preferencia. ¿Aceptás?</p>
         <button id="btn-aceptar-cookies" type="button">Aceptar cookies</button>
     </div>
 
+    <script src="practica-fetch.js"></script>
+    <script src="storage.js"></script>
+    <script src="tema.js"></script>
+    <script src="carrito.js"></script>
+    <script src="wizard.js"></script>
     <script src="cookies.js"></script>
 </body>
 </html>
