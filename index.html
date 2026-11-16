@@ -19,10 +19,6 @@
             <label for="selector-categoria" class="visually-hidden">Filtrar por categoría:</label>
             <select id="selector-categoria" name="categoria">
                 <option value="">Todas las categorías</option>
-                <option value="celulares">Celulares</option>
-                <option value="notebooks">Notebooks</option>
-                <option value="audio">Audio</option>
-                <option value="accesorios">Accesorios</option>
             </select>
         </form>
 
@@ -98,27 +94,27 @@
             <h2 id="titulo-categorias">Explorá por categoría</h2>
 
             <div class="grilla-categorias">
-                <a href="#" class="tarjeta-categoria">
+                <a href="#" class="tarjeta-categoria" data-categoria="Celulares">
                     <span class="categoria-emoji" aria-hidden="true">📱</span>
                     <span>Celulares</span>
                 </a>
-                <a href="#" class="tarjeta-categoria">
+                <a href="#" class="tarjeta-categoria" data-categoria="Audio">
                     <span class="categoria-emoji" aria-hidden="true">🎧</span>
                     <span>Audio</span>
                 </a>
-                <a href="#" class="tarjeta-categoria">
+                <a href="#" class="tarjeta-categoria" data-categoria="Informática">
                     <span class="categoria-emoji" aria-hidden="true">💻</span>
                     <span>Informática</span>
                 </a>
-                <a href="#" class="tarjeta-categoria">
+                <a href="#" class="tarjeta-categoria" data-categoria="Gaming">
                     <span class="categoria-emoji" aria-hidden="true">🎮</span>
                     <span>Gaming</span>
                 </a>
-                <a href="#" class="tarjeta-categoria">
+                <a href="#" class="tarjeta-categoria" data-categoria="Smartwatch">
                     <span class="categoria-emoji" aria-hidden="true">⌚</span>
                     <span>Smartwatch</span>
                 </a>
-                <a href="#" class="tarjeta-categoria">
+                <a href="#" class="tarjeta-categoria" data-categoria="Accesorios">
                     <span class="categoria-emoji" aria-hidden="true">🔌</span>
                     <span>Accesorios</span>
                 </a>
@@ -186,6 +182,7 @@
         <section class="productos-destacados" aria-labelledby="titulo-destacados">
             <h2 id="titulo-destacados">Productos destacados</h2>
             <div id="estado-productos" class="estado-productos" role="status" aria-live="polite">Cargando productos...</div>
+            <div id="sin-resultados" class="estado-productos" role="status" aria-live="polite" hidden></div>
             <div id="contenedor-productos" class="grilla-productos"></div>
         </section>
 
