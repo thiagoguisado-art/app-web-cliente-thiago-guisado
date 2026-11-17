@@ -1544,3 +1544,69 @@ body.dark #banner-cookies {
     border: 1px solid var(--color-rojo-claro);
     border-radius: var(--radio-borde);
 }
+.estado-productos {
+    margin: 1rem 1.25rem;
+    padding: 1rem 1.25rem;
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-borde);
+    color: var(--color-texto-suave);
+    text-align: center;
+    font-weight: bold;
+}
+
+.estado-productos--error {
+    color: var(--color-rojo-oscuro);
+    background-color: #fdecea;
+    border-color: var(--color-rojo-claro);
+}
+
+.estado-productos button {
+    margin-top: 0.75rem;
+    padding: 0.5rem 1.25rem;
+    border: none;
+    border-radius: var(--radio-borde);
+    background-color: var(--color-rojo);
+    color: #ffffff;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+.estado-productos button:hover {
+    background-color: var(--color-rojo-oscuro);
+}
+
+.sin-stock {
+    padding: 0.5rem 1.25rem 0;
+    color: var(--color-rojo-oscuro);
+    font-weight: bold;
+}
+
+.tarjeta-producto button:disabled {
+    background-color: var(--color-texto-suave);
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+body.dark .estado-productos {
+    background-color: var(--color-superficie);
+    border-color: var(--color-borde);
+    color: var(--color-texto-suave);
+}
+
+body.dark .estado-productos--error {
+    color: #ffb4ab;
+    background-color: #3b1a1a;
+    border-color: var(--color-rojo);
+}
+
+body.dark .sin-stock {
+    color: var(--color-rojo-claro);
+}
+
+body.dark .tarjeta-producto button:disabled {
+    background-color: #3a3a3a;
+    color: var(--color-texto-suave);
+}

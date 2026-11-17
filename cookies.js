@@ -29,11 +29,21 @@ function getCookie(nombre) {
 const bannerCookies = document.getElementById('banner-cookies');
 const btnAceptarCookies = document.getElementById('btn-aceptar-cookies');
 
-if (!getCookie('cookies_aceptadas')) {
+const aceptadasEnCookie = getCookie('cookies_aceptadas') === 'true';
+const aceptadasEnStorage = storage.get('cookies_aceptadas', false) === true;
+
+if (aceptadasEnCookie || aceptadasEnStorage) {
+  bannerCookies.hidden = true;
+
+  if (!aceptadasEnCookie) {
+    setCookie('cookies_aceptadas', 'true', 30);
+  }
+} else {
   bannerCookies.hidden = false;
 }
 
 btnAceptarCookies.addEventListener('click', () => {
   setCookie('cookies_aceptadas', 'true', 30);
+  storage.set('cookies_aceptadas', true);
   bannerCookies.hidden = true;
 });

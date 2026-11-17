@@ -118,15 +118,23 @@ function eliminarDelCarrito(id) {
   actualizarVista(carrito);
 }
 
-document.querySelectorAll('.tarjeta-producto button[data-id]').forEach((boton) => {
-  boton.addEventListener('click', () => {
+const contenedorProductos = document.getElementById('contenedor-productos');
+
+if (contenedorProductos) {
+  contenedorProductos.addEventListener('click', (evento) => {
+    const boton = evento.target.closest('button[data-id]');
+
+    if (!boton) {
+      return;
+    }
+
     agregarAlCarrito(
       Number(boton.dataset.id),
       boton.dataset.nombre,
       Number(boton.dataset.precio)
     );
   });
-});
+}
 
 const listaCarrito = document.querySelector('.carrito-lista');
 
